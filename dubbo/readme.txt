@@ -1,14 +1,22 @@
 
-ĞŞ¸Ä×¢Òâ£º
+ä¿®æ”¹æ³¨æ„ï¼š
 
-1) Ìí¼ÓÁËĞÂµÄÄ£¿é£¬ÒªÔÚPOMÖĞmaven-shade-pluginµÄ<artifactSet>ÖĞÌí¼Ó<include>
+1) æ·»åŠ äº†æ–°çš„æ¨¡å—ï¼Œè¦åœ¨POMä¸­maven-shade-pluginçš„<artifactSet>ä¸­æ·»åŠ <include>
 
-2) Ìí¼ÓÁËĞÂµÄÀ©Õ¹µã£¬ÒªÔÚPOMÖĞmaven-shade-plugin¼ÓÉÏ<transformer>
+2) æ·»åŠ äº†æ–°çš„æ‰©å±•ç‚¹ï¼Œè¦åœ¨POMä¸­maven-shade-pluginåŠ ä¸Š<transformer>
 
-ËÑË÷³ö À©Õ¹µãÅäÖÃÎÄ¼ş µÄÃüÁî
+æœç´¢å‡º æ‰©å±•ç‚¹é…ç½®æ–‡ä»¶ çš„å‘½ä»¤
 
 $ find . -wholename */META-INF/dubbo/* -type f | grep -vF /test/ | awk -F/ '{print $NF}' | sort -u
 com.alibaba.dubbo.cache.CacheFactory
 com.alibaba.dubbo.common.compiler.Compiler
 com.alibaba.dubbo.common.extension.ExtensionFactory
 ...and so on...
+
+
+ä½¿ç”¨æ“ä½œï¼š
+1) éƒ¨ç½²åœ¨æœ¬åœ°
+cd dubbo\target
+mvn install:install-file -Dfile=F:\fasbit\dubbox-master\dubbo\target\dubbo-2.8.4.jar -DgroupId=com.alibaba -DartifactId=dubbo -Dversion=2.8.4 -Dpackaging=jar
+
+2) åº”ç”¨åˆ°å…¶ä»–å·¥ç¨‹
